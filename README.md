@@ -36,7 +36,7 @@ SmartWatt is an intelligent energy management system designed specifically for l
 
 ## Technologies
 
-- Python with Flask for the backend
+- Python (3.11) with Flask for the backend
 - Pandas and NumPy for data processing
 - CVXPY for linear programming optimization
 - Custom SGD and Genetic Algorithm implementations
