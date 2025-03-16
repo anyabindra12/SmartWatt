@@ -12,7 +12,6 @@ import plotly.io as pio
 from dotenv import load_dotenv
 # Add these imports at the top of the file
 from optimization.custom_optimizer import CustomEnergyOptimizer
-from optimization.genetic_optimizer import GeneticOptimizer
 # from api.energy_api import energy_api
 
 # Load environment variables
@@ -630,13 +629,6 @@ def run_custom_optimization():
                 peak_shaving_weight=weights[2],
                 battery_cycle_weight=weights[3],
                 use_sgd=False
-            )
-        elif algorithm == "genetic":
-            custom_optimizer = GeneticEnergyOptimizer(
-                cost_weight=weights[0],
-                self_consumption_weight=weights[1],
-                peak_shaving_weight=weights[2],
-                battery_cycle_weight=weights[3]
             )
         else:
             return jsonify({"error": f"Unknown algorithm: {algorithm}"}), 400
